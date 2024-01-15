@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Техническое задание</title>
+  <link
+    rel="preload"
+    href="fonts/ProximaNovaRegular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNovaSemoBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/ProximaNovaBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <main class="main">
+        <div class="search">
+  <div class="container search__container">
+    <h2 class="search__title">Marketplace</h2>
+    <div class="search__bar">
+      <button class="search__button btn-reset" type="submit">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <input
+        class="search__input input-reset"
+        type="text"
+        placeholder="Search for a product, flower, etc"
+      />
+    </div>
+    <div class="search__checkbox">
+      <input type="checkbox" id="checkbox1" name="checkbox" />
+      <label class="checkbox" for="checkbox1">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#quality"></use>
+        </svg>
+        <span>Buds</span>
+      </label>
+      <input type="checkbox" id="checkbox2" name="checkbox" />
+      <label class="checkbox" for="checkbox2">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#quality"></use>
+        </svg>
+        <span>Edible</span>
+      </label>
+      <input type="checkbox" id="checkbox3" name="checkbox" />
+      <label class="checkbox" for="checkbox3">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#quality"></use>
+        </svg>
+        <span>Non Edible</span>
+      </label>
+      <input type="checkbox" id="checkbox4" name="checkbox" />
+      <label class="checkbox" for="checkbox4">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#quality"></use>
+        </svg>
+        <span>Concentrate</span>
+      </label>
+    </div>
+  </div>
+</div>
+ <div class="range">
+  <div class="container range__container">
+    <div class="range__box">
+      <div class="range__prop">
+        <h2 class="range__caption">Price Range</h2>
+        <div class="range-slider slider">
+          <span class="slider-track"></span>
+          <input
+            type="range"
+            name="min_val"
+            class="min-val"
+            min="0"
+            max="999"
+            value="0"
+            id="slideMin"
+          />
+          <div class="progres"></div>
+          <input
+            type="range"
+            name="max_val"
+            class="max-val"
+            min="0"
+            max="999"
+            value="634"
+            id="slideMax"
+          />
+          <div class="tooltip min-tooltip"></div>
+          <div class="tooltip max-tooltip"></div>
+        </div>
+        <div class="input-box">
+          <div class="min-box">
+            <div class="input-wrap">
+              <input
+                type="text"
+                name="min_input"
+                class="input-field input-reset min-input"
+                value="0"
+              />
+              <span class="input-addon">$</span>
+            </div>
+          </div>
+          <div class="max-box">
+            <div class="input-wrap">
+              <input
+                type="text"
+                name="max_input"
+                class="input-field input-reset max-input"
+                value="634"
+              />
+              <span class="input-addon">$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="range__prop">
+        <h2 class="range__caption">ТНС, %</h2>
+        <div class="range-slider">
+          <div class="range-slider__value">
+            <span class="value-1">65%</span>
+          </div>
+          <div class="range-slider__box">
+            <input
+              class="range-slider__input input-1"
+              type="range"
+              id="myRange"
+              min="0"
+              max="100"
+              value="65"
+              steps="1"
+            />
+            <div class="progresBar one"></div>
+            <div class="range-slider__put" id="output">
+              <span class="put-1 span">65%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="range__prop">
+        <h2 class="range__caption">CBD, %</h2>
+        <div class="range-slider">
+          <div class="range-slider__value">
+            <span class="value-2">65%</span>
+          </div>
+          <div class="range-slider__box">
+            <input
+              class="range-slider__input input-2"
+              type="range"
+              id="myRange"
+              min="0"
+              max="100"
+              value="65"
+              steps="1"
+            />
+            <div class="progresBar two"></div>
+            <div class="range-slider__put" id="output">
+              <span class="put-2 span">65%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="range__dropdown">
+      <div class="range__dropdown-sort" id="rangeDropdown">
+        <img src="img/sort.png" alt="" />
+      </div>
+      <div class="range__dropdown-box active" id="rangeDropdownBox">
+        <div class="range__dropdown-case">
+          <h2 class="range__dropdown-title">Sort by:</h2>
+          <ul class="range__dropdown-list list-reset">
+            <li class="range__dropdown-item item">
+              <div class="item__icon">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#calendar"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Date (New first)</span>
+              </div>
+            </li>
+            <li class="range__dropdown-item item">
+              <div class="item__icon">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#calendar"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Date (Old first)</span>
+              </div>
+            </li>
+            <li class="range__dropdown-item item">
+              <div class="item__icon">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#arrow-up"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Price (High first)</span>
+              </div>
+            </li>
+            <li class="range__dropdown-item item">
+              <div class="item__icon">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#arrow-down"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Price (Low first)</span>
+              </div>
+            </li>
+            <li class="range__dropdown-item item">
+              <div class="item__icon arrow thc-up">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#thc"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Total THC (High first)</span>
+              </div>
+            </li>
+            <li class="range__dropdown-item item">
+              <div class="item__icon arrow thc-down">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#thc"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Total THC (Low first)</span>
+              </div>
+            </li>
+            <li class="range__dropdown-item item">
+              <div class="item__icon arrow cbd-up">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#cbd"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Total CBD (High first)</span>
+              </div>
+            </li>
+            <li class="range__dropdown-item item">
+              <div class="item__icon arrow cbd-down">
+                <svg class="">
+                  <use xlink:href="img/sprite.svg#cbd"></use>
+                </svg>
+              </div>
+              <div class="item__descr">
+                <span>Total CBD (Low first)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="dropdown">
+  <div class="container dropdown__container">
+    <div class="dropdown__box">
+      <h2 class="breadcrumb__title">1034,5 Results</h2>
+      <div class="breadcrumb__box">
+        <ul class="breadcrumb list-reset" id="breadcrumbs"></ul>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar__item">
+        <div class="sidebar__item-box" id="menuButton">
+          <div class="sidebar__title">Classification</div>
+          <svg class="svg">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </div>
+        <ul class="sidebar__checkbox-box list-reset active" id="dropdownMenu">
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="100% Indica"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">100% Indica</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="100% Sativa"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">100% Sativa</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="&gt;50% Indica"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">>50% Indica</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="&gt;50% Sativa"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">>50% Sativa</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__item">
+        <div class="sidebar__item-box" id="menuButton2">
+          <div class="sidebar__title">Production Method</div>
+          <svg class="svg svg2" id="svg2">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </div>
+        <ul class="sidebar__checkbox-box list-reset active" id="dropdownMenu2">
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Indoor">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Indoor</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Outdoor"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Outdoor</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Greenhouse"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Greenhouse</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Light Deprivation"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Light Deprivation</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Mixed Light"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Mixed Light</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Other">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Other</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__item">
+        <div class="sidebar__item-box" id="menuButton3">
+          <div class="sidebar__title">Size</div>
+          <svg class="svg svg2 svg3" id="svg2">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </div>
+        <ul class="sidebar__checkbox-box list-reset active" id="dropdownMenu3">
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Flower">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Flower</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Pre-Roll Flower"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Pre-Roll Flower</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Pre-Roll Infused"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Pre-Roll Infused</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Pre-Roll Leaf"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Pre-Roll Leaf</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Shake">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Shake</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Smalls">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Smalls</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Trim">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Trim</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Shake">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Shake</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label class="sidebar__checkbox custom-checkbox" data-text="Keef">
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Keef</span>
+            </label>
+          </li>
+          <li class="sidebar__checkbox-item">
+            <label
+              class="sidebar__checkbox custom-checkbox"
+              data-text="Fresh Frozen"
+            >
+              <input class="check" type="checkbox" />
+              <span class="checkbox-text">Fresh Frozen</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </main>
+
+    </div>
+  </body>
+</html>
